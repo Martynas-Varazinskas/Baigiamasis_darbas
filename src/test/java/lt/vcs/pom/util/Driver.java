@@ -16,7 +16,7 @@ public class Driver {
 
 //        chromeOptions.addArguments("--window-position=4000,0");
         chromeOptions.addArguments("--start-maximized");
-        chromeOptions.addArguments("--force-device-scale-factor=0.8");
+        chromeOptions.addArguments("--force-device-scale-factor=0.9");
 //        chromeOptions.addArguments("window-size=2000,2000");
 //        chromeOptions.addArguments("--headless=new");
 

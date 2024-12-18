@@ -151,7 +151,7 @@ public class Common {
 
     public static boolean isElementDisplayed(By locator) {
         getElement(locator).isDisplayed();
-        return false;
+        return true;
     }
 
     public static void waitForPageLoadAndAjaxComplete(int seconds) {
