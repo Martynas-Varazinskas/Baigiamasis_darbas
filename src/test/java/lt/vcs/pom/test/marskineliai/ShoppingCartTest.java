@@ -17,11 +17,9 @@ public class ShoppingCartTest extends TestBase {
     }
 
     @Test
-    public void testShoppingCartAddItem(){
+    public void testShoppingCartAddItem() {
         String expectedResult = "1";
         String actualResult;
-//        String expectedProductTitle;
-//        String actualProductTitle;
 
         HomePage.clickMusuDizainaiElement();
         KategorijaPage.addItemSpongeBobTshirt();
@@ -29,7 +27,23 @@ public class ShoppingCartTest extends TestBase {
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
-                "\nActual: %s\nExpected contains: %s".formatted(actualResult,expectedResult));
+                "\nActual: %s\nExpected contains: %s".formatted(actualResult, expectedResult));
 
     }
+
+//    @Test
+//    public void testShoppingCartAddMultipleItems(){
+//        int expectedItemsAmount;
+//        int actualItemsAmount;
+//
+//        HomePage.clickMusuDizainaiElement();
+//        KategorijaPage.addRandomItem();
+//        actualItemsAmount = KrepselisPage.readCartBadgeNumber();
+//
+//        Assert.assertTrue(
+//                actualResult.contains(expectedResult),
+//                "\nActual: %s\nExpected contains: %s".formatted(actualResult, expectedResult));
+//
+//    }
+
 }
