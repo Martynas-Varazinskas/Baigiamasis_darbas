@@ -15,7 +15,7 @@ public class LoginTest extends TestBase {
     }
 
     @Test
-    public void testMarskineliaiLoginWithUserName_Positive() {
+    public void testPositiveLoginWithUserName() {
         String userName = "martynas_test";
         String password = "TestPassword01*";
         String expectedUserName = "martynas_test";
@@ -38,5 +38,28 @@ public class LoginTest extends TestBase {
         Assert.assertTrue(
                 actualUrl.contains(expectedUrl),
                 "\nActual: %s\nExpected contains: %s".formatted(actualUrl, expectedUrl));
+    }
+
+    @Test
+    public void testNegativeLoginWithWrongUserName() {
+        String userName = "test";
+        String password = "TestPassword01*";
+        String expectedMessage
+                = "Error: The username test is not registered on this site." +
+                " If you are unsure of your username, try your email address instead.";
+        String actualMessage;
+
+        HomePage.clickLogInIcon();
+        PaskyraPage.enterUserName(userName);
+        PaskyraPage.enterPassword(password);
+        PaskyraPage.clickButtonLogin();
+
+        actualMessage = PaskyraPage.readErrorMessage();
+
+        Assert.assertTrue(
+                actualMessage.contains(expectedMessage),
+                "\nActual: %s\nExpected contains: %s".formatted(actualMessage, expectedMessage));
+
+
     }
 }

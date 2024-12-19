@@ -17,6 +17,7 @@ public class PaskyraPage {
     private static final By iconLogout = By.xpath("//a[@class='log-out__icon']");
     private static final By buttonPrisijungti = By.xpath("//button[@value='Prisijungti']");
     private static final By headlineLogin = By.xpath("(//h3)[1]");
+    private static final By errorMessage = By.xpath("//div[@class='message-container container alert-color medium-text-center']");
 
     public static void enterUserName(String value) {
         Common.sendKeysToElement(inputUserName, value);
@@ -46,7 +47,7 @@ public class PaskyraPage {
 
     public static Boolean buttonPrisijungtiIsVisible() {
         try {
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
             wait.until(ExpectedConditions.elementToBeClickable((WebElement) buttonPrisijungti));
             return Common.isElementDisplayed(buttonPrisijungti);
         } catch (Exception e) {
@@ -57,5 +58,9 @@ public class PaskyraPage {
 
     public static String readHeadline() {
         return Common.getTextFromElement(headlineLogin);
+    }
+
+    public static String readErrorMessage() {
+        return Common.getTextFromElement(errorMessage);
     }
 }
