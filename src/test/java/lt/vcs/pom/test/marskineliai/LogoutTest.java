@@ -12,8 +12,6 @@ public class LogoutTest extends TestBase {
     @Override
     public void setUp() {
         HomePage.open();
-
-
     }
 
     @Test

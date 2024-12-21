@@ -59,7 +59,5 @@ public class LoginTest extends TestBase {
         Assert.assertTrue(
                 actualMessage.contains(expectedMessage),
                 "\nActual: %s\nExpected contains: %s".formatted(actualMessage, expectedMessage));
-
-
     }
 }

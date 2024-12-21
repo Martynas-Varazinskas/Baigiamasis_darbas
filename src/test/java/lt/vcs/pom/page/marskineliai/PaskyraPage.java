@@ -48,7 +48,7 @@ public class PaskyraPage {
     public static Boolean buttonPrisijungtiIsVisible() {
         try {
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-            wait.until(ExpectedConditions.elementToBeClickable((WebElement) buttonPrisijungti));
+            wait.until(ExpectedConditions.elementToBeClickable(buttonPrisijungti));
             return Common.isElementDisplayed(buttonPrisijungti);
         } catch (Exception e) {
             e.printStackTrace();

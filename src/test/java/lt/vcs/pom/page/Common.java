@@ -31,7 +31,7 @@ public class Common {
     }
 
     public static void close() {
-//        Driver.quitDriver();
+        Driver.quitDriver();
     }
 
     public static String getTabTitle() {
