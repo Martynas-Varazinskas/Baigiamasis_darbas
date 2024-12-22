@@ -15,8 +15,8 @@ public class PaieskaTest extends TestBase {
         HomePage.open();
     }
 
-    @DataProvider(name = "provideDataForPaieska")
-    public Object[][] provideDataForPaieska() {
+    @DataProvider(name = "providerDataForPaieska")
+    public Object[][] providerDataForPaieska() {
         return new Object[][]{
                 {"MTV WORLD", true},
                 {"Kempiniukas", true},
@@ -27,7 +27,7 @@ public class PaieskaTest extends TestBase {
         };
     }
 
-    @Test(dataProvider = "provideDataForPaieska")
+    @Test(dataProvider = "providerDataForPaieska")
     public void testPaieska(String searchValue, Boolean expectedValue) {
         String expectedRezultataiPagalMessage = "%s".formatted(searchValue).toUpperCase();
         String actualRezultataiPagalMessage;

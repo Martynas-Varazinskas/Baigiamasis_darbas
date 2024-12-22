@@ -20,7 +20,7 @@ public class KategorijaPage extends ProduktasPage {
     public static String randomNumber = String.valueOf(SimpleMath.random(3, 8));
     private static final By randomItem = By.xpath(
             "(//a[@class='woocommerce-LoopProduct-link woocommerce-loop-product__link'])[%s]".formatted(randomNumber));
-    public static int randomAmount = SimpleMath.random(3, 8);
+    public static int randomAmount = SimpleMath.random(2, 8);
     public static final By categoryVyramsElement = By.xpath("//a[@title='Prekių kategorija - Vyrams']");
     public static final By tshirtAgurkas = By.xpath(
             "(//a[@href='https://marskineliai.lt/produktas/ekologiski-oversized-marskineliai-agurkas/'])[1]");
@@ -56,6 +56,5 @@ public class KategorijaPage extends ProduktasPage {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3));
         wait.until(ExpectedConditions.elementToBeClickable(buttonAddToWishlist));
         Common.clickOnElement(buttonAddToWishlist);
-
     }
 }
