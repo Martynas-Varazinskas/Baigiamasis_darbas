@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Baigiamasis_darbas">
+    <test name="marskineliai">
+        <classes>
+            <class name="lt.vcs.pom.test.marskineliai.LoginTest">
+            </class>
+            <class name="lt.vcs.pom.test.marskineliai.LogoutTest">
+            </class>
+            <class name="lt.vcs.pom.test.marskineliai.PaieskaTest"/>
+            <class name="lt.vcs.pom.test.marskineliai.ShoppingCartTest"/>
+            <class name="lt.vcs.pom.test.marskineliai.WishListTest"/>
+        </classes>
+    </test>
+</suite>
