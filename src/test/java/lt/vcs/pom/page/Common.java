@@ -31,7 +31,7 @@ public class Common {
     }
 
     public static void close() {
-        Driver.quitDriver();
+//        Driver.quitDriver();
     }
 
     public static String getTabTitle() {
@@ -255,5 +255,16 @@ public class Common {
             selectedElements.add(element.isSelected());
         }
         return selectedElements;
+    }
+
+    public static void refreshPageWithActions() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .sendKeys(Keys.F5)
+                .perform();
+    }
+
+    public static void refreshPage() {
+        Driver.getDriver().navigate().refresh();
     }
 }
