@@ -14,34 +14,37 @@ public class PaieskaTest extends TestBase {
     public void setUp() {
         HomePage.open();
     }
+
     @DataProvider(name = "provideDataForPaieska")
-    public Object[][] provideDataForPaieska(){
+    public Object[][] provideDataForPaieska() {
         return new Object[][]{
-                {"MTV WORLD", true },
-                {"Kempiniukas", true },
-                {"Kake Make", true },
+                {"MTV WORLD", true},
+                {"Kempiniukas", true},
+                {"Kake Make", true},
                 {"not found", false},
                 {"blabla bla", false},
                 {"false", false}
         };
     }
+
     @Test(dataProvider = "provideDataForPaieska")
-    public void testPaieska(String searchValue, Boolean expectedValue ){
+    public void testPaieska(String searchValue, Boolean expectedValue) {
         String expectedRezultataiPagalMessage = "%s".formatted(searchValue).toUpperCase();
         String actualRezultataiPagalMessage;
         boolean actualValue;
 
         HomePage.searchFor(searchValue);
-        actualValue =  PaieskaPage.checkIfProductsFound();
+        actualValue = PaieskaPage.checkIfProductsFound();
         actualRezultataiPagalMessage = PaieskaPage.readRezultataiPagalMessage();
 
         Assert.assertTrue(
                 actualRezultataiPagalMessage.contains(expectedRezultataiPagalMessage),
-                "\nActual: %s\nExpected contains: %s".formatted(actualRezultataiPagalMessage,actualRezultataiPagalMessage));
+                "\nActual: %s\nExpected contains: %s".formatted(actualRezultataiPagalMessage, actualRezultataiPagalMessage));
 
-        Assert.assertEquals(expectedValue,actualValue);
-        if (actualValue = false){
+        Assert.assertEquals(expectedValue, actualValue);
+        if (actualValue == false) {
             System.out.println("Produktų nerasta pagal: %s".formatted(searchValue));
-        };
+        }
+        ;
     }
 }

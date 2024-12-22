@@ -15,7 +15,6 @@ public class HomePage {
     private static final By inputPaieska = By.xpath("//input[@id='woocommerce-product-search-field-0']");
 
 
-
     public static void open() {
         Common.setUpChrome(7);
         Common.openUrl("https://marskineliai.lt/");
@@ -31,7 +30,7 @@ public class HomePage {
     }
 
     public static void searchFor(String value) {
-        Common.sendKeysToElement(inputPaieska,value);
+        Common.sendKeysToElement(inputPaieska, value);
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.ENTER).build().perform();
 

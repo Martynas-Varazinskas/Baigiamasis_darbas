@@ -12,16 +12,12 @@ public class KrepselisPage {
     private static final By totalShoppingCartPrice = By.xpath("//td[@data-title='Viso']//bdi");
 
 
-
-
     public static String readCartBadgeNumber() {
         return Common.getTextFromElement(spanCartCount);
     }
 
-
     public static String countTotalItemsPrice() {
-       return Common.getTextFromElement(itemPrice);
-//        return Common.getElementAttributeValue(itemPrice, "text");
+        return Common.getTextFromElement(itemPrice);
     }
 
     public static String getTotalShoppingCartPrice() {

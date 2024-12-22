@@ -14,27 +14,10 @@ public class Driver {
         WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
 
-//        chromeOptions.addArguments("--window-position=4000,0");
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--force-device-scale-factor=0.9");
-//        chromeOptions.addArguments("window-size=2000,2000");
-//        chromeOptions.addArguments("--headless=new");
 
         driver.set(new ChromeDriver(chromeOptions));
-
-        /**
-         * Zoom solution for Mac
-         */
-//        chromeDriver.get("chrome://settings");
-//        ((JavascriptExecutor) chromeDriver).executeScript("chrome.settingsPrivate.setDefaultZoom(0.5)");
-//        Thread.sleep(3000);
-    }
-
-    public static void setFirefoxDriver() {
-        WebDriverManager.firefoxdriver().setup();
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-
-        driver.set(new FirefoxDriver(firefoxOptions));
 
     }
 

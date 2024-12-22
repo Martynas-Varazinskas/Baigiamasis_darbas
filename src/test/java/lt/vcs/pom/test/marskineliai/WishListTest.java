@@ -28,7 +28,6 @@ public class WishListTest extends TestBase {
         KategorijaPage.addItemTotWishList();
         expectedProductTitle = ProduktasPage.readItemTitle().replaceAll("[“”„”]", "\"");
         ProduktasPage.openWishList();
-        Common.refreshPageWithActions();
         Common.refreshPage();
         actualProductTitle = WishListPage.readWishlistItemTitle();
         actualWishListIconCount = WishListPage.getWishListIconCount();
@@ -37,8 +36,5 @@ public class WishListTest extends TestBase {
                 actualProductTitle.contains(expectedProductTitle),
                 "\nActual: %s\nExpected contains: %s".formatted(actualProductTitle, expectedProductTitle));
         Assert.assertEquals(actualWishListIconCount, expectedWishListIconCount);
-
     }
-
-
 }

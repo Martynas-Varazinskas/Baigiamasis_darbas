@@ -28,7 +28,7 @@ public class PaskyraPage {
     }
 
     public static void clickButtonLogin() {
-        Common.waitElementToBeVisible(buttonLogin,3);
+        Common.waitElementToBeVisible(buttonLogin, 3);
         Common.clickOnElement(buttonLogin);
     }
 

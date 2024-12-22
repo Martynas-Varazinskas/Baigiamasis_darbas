@@ -28,7 +28,6 @@ public class ShoppingCartTest extends TestBase {
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
                 "\nActual: %s\nExpected contains: %s".formatted(actualResult, expectedResult));
-
     }
 
     @Test
@@ -51,7 +50,5 @@ public class ShoppingCartTest extends TestBase {
         Assert.assertTrue(
                 actualTotalPrice.contains(expectedTotalPrice),
                 "\nActual: %s\nExpected contains: %s".formatted(actualTotalPrice, expectedTotalPrice));
-
     }
-
 }

@@ -31,14 +31,10 @@ public class LogoutTest extends TestBase {
 
         Assert.assertTrue(
                 actualHeadline.contains(expectedHeadline),
-                "\nActual: %s\nExpected conatins: %s".formatted(actualHeadline,expectedHeadline));
+                "\nActual: %s\nExpected conatins: %s".formatted(actualHeadline, expectedHeadline));
 
         actualResult = PaskyraPage.buttonPrisijungtiIsVisible();
 
-        Assert.assertEquals(actualResult,expectedResult);
-
-
-
+        Assert.assertEquals(actualResult, expectedResult);
     }
-
 }

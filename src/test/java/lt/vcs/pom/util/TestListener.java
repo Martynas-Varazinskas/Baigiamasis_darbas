@@ -41,31 +41,4 @@ public class TestListener implements ITestListener {
         }
     }
 
-    //    @Override
-//    public void onStart(ITestContext context) {
-//        System.out.println("ITestListener OnStart");
-//        System.out.println(context.getName());
-//        System.out.println(context.getHost());
-//        System.out.println("-".repeat(50));
-//    }
-//
-//    @Override
-//    public void onTestStart(ITestResult result) {
-//        System.out.println("ITestListener onTestStart");
-//        System.out.println(result.id());
-//        System.out.println(result.getName());
-//        System.out.println(result.getHost());
-//        System.out.println(result.getStatus());
-//        System.out.println("-".repeat(50));
-//    }
-//
-//    @Override
-//    public void onTestSuccess(ITestResult result) {
-//        System.out.println("ITestListener onTestSuccess");
-//        System.out.println(result.id());
-//        System.out.println(result.getName());
-//        System.out.println(result.getHost());
-//        System.out.println(result.getStatus());
-//        System.out.println("-".repeat(50));
-//    }
 }

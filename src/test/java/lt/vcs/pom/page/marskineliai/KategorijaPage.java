@@ -57,6 +57,5 @@ public class KategorijaPage extends ProduktasPage {
         wait.until(ExpectedConditions.elementToBeClickable(buttonAddToWishlist));
         Common.clickOnElement(buttonAddToWishlist);
 
-
     }
 }

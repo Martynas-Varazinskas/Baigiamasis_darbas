@@ -10,9 +10,6 @@ public class PaieskaPage {
             "//nav[@class='woocommerce-breadcrumb breadcrumbs uppercase']/h2");
     private static final By rastiProduktaiElement = By.xpath(
             "//div[@class='woocommerce-notices-wrapper']");
-    private static final By produktuNerastaElement = By.xpath(
-            "//div[@class='woocommerce-no-products-found']");
-
 
     public static String readRezultataiPagalMessage() {
         return Common.getTextFromElement(rezultataiPagalElement);

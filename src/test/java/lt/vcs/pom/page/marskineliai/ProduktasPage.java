@@ -10,10 +10,8 @@ public class ProduktasPage {
     public static final By productTitle = By.xpath("//h1[@class='product-title product_title entry-title']");
     public static final By iconWishList = By.xpath("//div[@id='favorites']");
 
-
     public static String readItemTitle() {
         return Common.getTextFromElement(productTitle);
-
     }
 
     public static void openWishList() {
