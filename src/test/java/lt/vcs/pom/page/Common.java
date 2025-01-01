@@ -60,7 +60,6 @@ public class Common {
         return getElement(locator).isEnabled();
     }
 
-
     public static WebDriverWait getWebDriverWait(int seconds) {
         return new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(seconds));
     }

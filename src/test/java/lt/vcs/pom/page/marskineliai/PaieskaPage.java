@@ -3,7 +3,6 @@ package lt.vcs.pom.page.marskineliai;
 import lt.vcs.pom.page.Common;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
 
 public class PaieskaPage {
     private static final By rezultataiPagalElement = By.xpath(

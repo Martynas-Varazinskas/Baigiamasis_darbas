@@ -6,8 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-import java.security.Key;
-
 public class HomePage {
 
     private static final By logInLinkIcon = By.xpath("(//i[@class='icon-user'])[1]");

@@ -3,7 +3,6 @@ package lt.vcs.pom.page.marskineliai;
 import lt.vcs.pom.page.Common;
 import lt.vcs.pom.util.Driver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

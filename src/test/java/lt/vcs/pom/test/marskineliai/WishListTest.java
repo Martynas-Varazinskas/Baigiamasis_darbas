@@ -1,10 +1,7 @@
 package lt.vcs.pom.test.marskineliai;
 
 import lt.vcs.pom.page.Common;
-import lt.vcs.pom.page.marskineliai.HomePage;
-import lt.vcs.pom.page.marskineliai.KategorijaPage;
-import lt.vcs.pom.page.marskineliai.ProduktasPage;
-import lt.vcs.pom.page.marskineliai.WishListPage;
+import lt.vcs.pom.page.marskineliai.*;
 import lt.vcs.pom.test.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -14,7 +11,14 @@ public class WishListTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
+        String userName = "martynas_test";
+        String password = "TestPassword01*";
+
         HomePage.open();
+        HomePage.clickLogInIcon();
+        PaskyraPage.enterUserName(userName);
+        PaskyraPage.enterPassword(password);
+        PaskyraPage.clickButtonLogin();
     }
 
     @Test
@@ -36,5 +40,8 @@ public class WishListTest extends TestBase {
                 actualProductTitle.contains(expectedProductTitle),
                 "\nActual: %s\nExpected contains: %s".formatted(actualProductTitle, expectedProductTitle));
         Assert.assertEquals(actualWishListIconCount, expectedWishListIconCount);
+
+        WishListPage.removeItemFromWishList();
     }
+
 }

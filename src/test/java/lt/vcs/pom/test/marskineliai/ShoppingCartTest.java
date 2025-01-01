@@ -1,6 +1,5 @@
 package lt.vcs.pom.test.marskineliai;
 
-import lt.vcs.pom.page.Common;
 import lt.vcs.pom.page.marskineliai.HomePage;
 import lt.vcs.pom.page.marskineliai.KategorijaPage;
 import lt.vcs.pom.page.marskineliai.KrepselisPage;
