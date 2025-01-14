@@ -1,4 +1,4 @@
-# Project "Baigiamasis_darbas"
+# Project "marskineliai.lt_Baigiamasis_darbas"
 ### Site used for testing
 [marskineliai.lt](https://marskineliai.lt/)
 ### Packages used
